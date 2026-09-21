@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f2;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary": "#ffffff", "on-surface-variant": "#4b463f", "on-primary-fixed-variant": "#4a4642", "secondary": "#7b5800", "surface-dim": "#dcdad3", "inverse-on-surface": "#f3f1ea", "on-secondary-container": "#715000", "tertiary-container": "#2e2a24", "primary-fixed": "#e8e1db", "surface-container-highest": "#e4e2dc", "on-secondary-fixed-variant": "#5d4200", "surface-tint": "#625e59", "surface-container-lowest": "#ffffff", "surface-container": "#f0eee7", "secondary-container": "#fdc34d", "inverse-surface": "#30312c", "on-tertiary-container": "#979188", "on-background": "#1b1c18", "surface-bright": "#fbf9f2", "surface-container-low": "#f6f4ed", "on-error": "#ffffff", "primary-fixed-dim": "#ccc5bf", "primary": "#181612", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#4a463f", "on-secondary-fixed": "#271900", "error-container": "#ffdad6", "background": "#fbf9f2", "primary-container": "#2d2a26", "secondary-fixed": "#ffdea6", "on-tertiary-fixed": "#1e1b15", "on-error-container": "#93000a", "outline-variant": "#cdc5bc", "surface-container-high": "#eae8e1", "tertiary-fixed": "#e9e1d7", "error": "#ba1a1a", "tertiary-fixed-dim": "#cdc5bc", "tertiary": "#191610", "inverse-primary": "#ccc5bf", "surface-variant": "#e4e2dc", "secondary-fixed-dim": "#f7bd48", "on-primary": "#ffffff", "on-primary-container": "#96918b", "on-primary-fixed": "#1e1b17", "outline": "#7c766e", "on-surface": "#1b1c18", "surface": "#fbf9f2" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-2xl": "4rem", "gutter": "1.5rem", "margin": "3rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-md": "1rem", "space-xl": "2.5rem" }, fontFamily: { "body-lg": ["Literata"], "display-lg": ["Newsreader"], "label-md": ["Literata"], "headline-lg": ["Newsreader"], "body-md": ["Literata"], "title-lg": ["Newsreader"], "body-sm": ["Literata"], "headline-sm": ["Newsreader"], "label-sm": ["Newsreader"], "label-lg": ["Literata"], "display-lg-mobile": ["Newsreader"], "headline-md": ["Newsreader"] }, fontSize: { "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "headline-md": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col antialiased min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(45,42,38,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Brand logo. - Primary color: #d4af37
+- Font: playfairDisplay
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VdNr47RQK_05QM_JbDlEci5g0jpIqlffUUKLMYYtW4JSYBKKOZ5hzGlaVFAus9ipXlbq-snLx-r2JRVxhxDfy3wU0sQAxct-PvQUhVH6ai5BX7Eeq6rReNY2IKd_vh4HEY0LrKsp2Hzu4PVTyuop2qEKmv2gz5jaxoS2zJJbndVPo3-4e-AHfQSaBnCjZd7e5BiAao0ls6HpXbQiwacR5hXN8bCnM28dCY_BnEVkDY"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-lg text-title-lg text-primary tracking-tight truncate">Nocturne</span><span class="text-secondary text-label-sm font-label-sm uppercase tracking-widest hidden sm:inline">• Scholar</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate italic">Session Diary</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Search Archives" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Scholar Profile" class="w-11 h-11 flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile pb-space-xl">
+<!-- Subtle Atmospheric Banner & Academic Context -->
+<div class="flex items-baseline justify-between pt-space-md pb-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">Session Diary</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-0.5">Daily Scholar's Chronicle</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-full text-on-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">auto_stories</span>
+<span>Folio XXII</span>
+</div>
+</div>
+<!-- Segment Switcher -->
+<div class="w-full bg-surface-container-high p-1 rounded-lg flex items-center justify-between mt-space-sm shadow-sm relative">
+<button class="flex-1 py-2 px-space-sm rounded-DEFAULT text-center font-label-lg text-label-lg transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1.5" id="tab-today-btn" onclick="switchDiaryTab('today')">
+<span class="material-symbols-outlined text-[18px] text-secondary">stylus_note</span>
+<span>Today's Notes</span>
+<span class="ml-1 px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm rounded-full">2</span>
+</button>
+<button class="flex-1 py-2 px-space-sm rounded-DEFAULT text-center font-label-lg text-label-lg transition-all duration-200 text-on-surface-variant hover:text-primary flex items-center justify-center gap-1.5" id="tab-tomorrow-btn" onclick="switchDiaryTab('tomorrow')">
+<span class="material-symbols-outlined text-[18px]">event_upcoming</span>
+<span>Tomorrow's Plan</span>
+<span class="ml-1 px-1.5 py-0.2 bg-surface-container-highest text-on-surface-variant text-label-sm font-label-sm rounded-full">3</span>
+</button>
+</div>
+<!-- SECTION 1: TODAY'S NOTES TAB -->
+<div class="flex flex-col w-full mt-space-lg transition-opacity duration-200" id="section-today">
+<!-- Action / Meta Strip -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span>2 Recorded Inscriptions · 3h 40m Total Focus</span>
+</div>
+<button class="flex items-center gap-1 px-space-sm py-1.5 bg-secondary text-on-secondary rounded-DEFAULT text-label-md font-label-md shadow-sm hover:opacity-95 transition-opacity active:scale-95" onclick="openNoteModal()">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add Note</span>
+</button>
+</div>
+<!-- Editorial Timeline Track -->
+<div class="relative flex flex-col gap-space-md pl-4">
+<!-- Vertical Inscription Thread -->
+<div class="absolute left-1.5 top-3 bottom-4 w-px bg-surface-container-highest"></div>
+<!-- Note Card 1: Macroeconomics -->
+<div class="relative flex flex-col bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm">
+<!-- Thread Node Indicator -->
+<div class="absolute -left-[19px] top-4 w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-surface"></div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-DEFAULT bg-secondary-fixed text-on-secondary-fixed font-semibold tracking-wide uppercase">14:30</span>
+<span class="font-title-lg text-title-lg text-primary">Macroeconomic Theory</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline cursor-pointer hover:text-secondary">bookmark</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-1">
+          Solved equilibrium state in Lemma 3.2. Mental clarity peaked around min 40. Need to verify boundary condition in tomorrow's review.
+        </p>
+<!-- Contextual Footer Pill with tactile scholarly quote snippet -->
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1 font-label-sm text-label-sm italic text-secondary">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span>Focus Deep Flow · 75 min block</span>
+</div>
+<button class="text-label-sm font-label-sm text-outline hover:text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<span>Refine</span>
+</button>
+</div>
+</div>
+<!-- Note Card 2: Linear Algebra -->
+<div class="relative flex flex-col bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm">
+<!-- Thread Node Indicator -->
+<div class="absolute -left-[19px] top-4 w-2.5 h-2.5 rounded-full bg-outline ring-4 ring-surface"></div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface-variant font-semibold tracking-wide uppercase">11:15</span>
+<span class="font-title-lg text-title-lg text-primary">Linear Algebra</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline cursor-pointer hover:text-secondary">bookmark_border</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-1">
+          Eigenspace orthogonal decomposition exercises. Cadence was steady; retained core definition without consulting bibliography.
+        </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1 font-label-sm text-label-sm italic text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">insights</span>
+<span>High Retention · 50 min block</span>
+</div>
+<button class="text-label-sm font-label-sm text-outline hover:text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<span>Refine</span>
+</button>
+</div>
+</div>
+<!-- Visual Scholar Artifact Tile -->
+<div class="relative bg-surface-container rounded-DEFAULT p-space-sm flex items-center gap-space-md shadow-sm">
+<div class="w-16 h-16 rounded-DEFAULT bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Sepia toned macro close-up of handwritten mathematical derivations on textured vellum paper, warm morning study desk with faint brass compass reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_rcvcVkNvMc14J325_cUPaUv4ISZu8-UBK9V6s7MFtDc3pUZdQGMSyhnhO45Fw2rgdjj18H03dcumyplBszqXL2OHwjem9vOeynOzafe8O8UOGOZRmlDKDfHfXK8F4GIRFIb5KdETmEmw5CVpMkktX2Pw3gtTLeyfJ7Ez9bxz-pib_PGz9bp7KjH-5jOzq2RCnBKj3IEe0gVIbbGg4NyhBFE46LBjIsZucb6zsC6d"/>
+</div>
+<div class="flex flex-col min-w-0 pr-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Marginalia Captured</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Calculus folio page 41 sketch</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant italic">Attached to Macroeconomic Theory</span>
+</div>
+</div>
+<!-- Expressive Prompt / Empty State Prompt Card -->
+<div class="relative flex flex-col items-center justify-center p-space-lg bg-surface-container-low rounded-DEFAULT cursor-pointer hover:bg-surface-container transition-colors text-center group" onclick="openNoteModal()">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-all mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">post_add</span>
+</div>
+<span class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors">Record Inscription</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-[280px]">
+          Capture a quick thought, reference, or mental friction from today's active study sessions.
+        </p>
+<span class="mt-space-sm font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold flex items-center gap-1">
+<span>Begin New Folio Note</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+<!-- SECTION 2: TOMORROW'S PLAN TAB (Hidden by default, switched via JS) -->
+<div class="hidden flex-col w-full mt-space-lg transition-opacity duration-200" id="section-tomorrow">
+<!-- Banner Header -->
+<div class="bg-primary-container text-on-primary rounded-DEFAULT p-space-md shadow-sm flex flex-col relative overflow-hidden mb-space-md">
+<div class="flex items-start justify-between z-10">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest font-semibold">Vanguard Slate</span>
+<span class="font-headline-sm text-headline-sm text-on-primary tracking-tight mt-0.5">Tomorrow's Intended Itinerary</span>
+<span class="font-body-sm text-body-sm text-on-primary-container mt-1">3 planned focus blocks curated for high cognitive endurance.</span>
+</div>
+<button aria-label="Add Tomorrow Goal" class="w-9 h-9 rounded-DEFAULT bg-secondary text-on-secondary flex items-center justify-center flex-shrink-0 shadow-sm active:scale-95 transition-transform" onclick="openPlanModal()">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<!-- Subtle Decorative Archival Graph Overlay -->
+<div class="mt-space-md pt-space-xs flex items-center gap-space-md z-10">
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-surface-container-high">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">hourglass_top</span>
+<span>4h 15m Scheduled</span>
+</div>
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-surface-container-high">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">flag</span>
+<span>Lemma Verification Priority</span>
+</div>
+</div>
+</div>
+<!-- Tomorrow Planned Block List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Plan Item 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT shadow-sm flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-6 h-6 rounded-DEFAULT bg-surface-container flex items-center justify-center flex-shrink-0 mt-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">check_box_outline_blank</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed rounded-DEFAULT uppercase font-semibold">09:00</span>
+<span class="font-title-lg text-title-lg text-primary truncate">Verify Lemma 3.2 Bounds</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Cross-check asymptotic bounds against Stokey &amp; Lucas Chapter 4. Ensure no leakage across boundary constraints.
+            </p>
+<div class="flex items-center gap-space-xs mt-space-xs text-label-sm font-label-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>60 min Deep Ingestion</span>
+</div>
+</div>
+</div>
+<button class="text-outline hover:text-primary">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Plan Item 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT shadow-sm flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-6 h-6 rounded-DEFAULT bg-surface-container flex items-center justify-center flex-shrink-0 mt-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">check_box_outline_blank</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 bg-surface-container-highest text-on-surface-variant rounded-DEFAULT uppercase font-semibold">11:30</span>
+<span class="font-title-lg text-title-lg text-primary truncate">Spectral Theory Problem Set 4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Complete proof for self-adjoint compact operators. Draft preliminary commentary for Thursday seminar.
+            </p>
+<div class="flex items-center gap-space-xs mt-space-xs text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>90 min Derivation</span>
+</div>
+</div>
+</div>
+<button class="text-outline hover:text-primary">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Plan Item 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT shadow-sm flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-6 h-6 rounded-DEFAULT bg-surface-container flex items-center justify-center flex-shrink-0 mt-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">check_box_outline_blank</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 bg-surface-container-highest text-on-surface-variant rounded-DEFAULT uppercase font-semibold">15:00</span>
+<span class="font-title-lg text-title-lg text-primary truncate">Primary Source Collation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Synthesize notes from European Economic Review print folios; tag relevant citations in research ledger.
+            </p>
+<div class="flex items-center gap-space-xs mt-space-xs text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>45 min Cataloging</span>
+</div>
+</div>
+</div>
+<button class="text-outline hover:text-primary">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Visual Scholar Artifact Tile for Tomorrow -->
+<div class="mt-space-xs bg-surface-container rounded-DEFAULT p-space-sm flex items-center gap-space-md shadow-sm">
+<div class="w-16 h-16 rounded-DEFAULT bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Classic library reading table with vintage green banker lamp, stacked hardbound leather tomes, mechanical brass pen, and warm ivory study planner notebook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA5ms2L5tzXsuRmsRYdXR39byt1QpMR0iJ7PUkm6fS8hlwjIfbGHBsGAXtOMR_3KFMOXiG3YhMgmvNX3Mn0LnkegjoNOAHNuSgKGGlHxNZFEQAQvDixcGPYy9qAjXabLoCAJuJxlmSSOG7Tc-W4rIDv-n8sm-ZUwdZZvvl7M5fbYjnehrv3oRCJ5vuWiE7g-eesWBkAcGFAV2suObbPpsjc6by4uDDBmkyR755jucZ"/>
+</div>
+<div class="flex flex-col min-w-0 pr-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Tomorrow's Sanctum</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">East Wing Carrel 14 Reserved</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant italic">08:45 AM access badge unlocked</span>
+</div>
+</div>
+<!-- Add Tomorrow Goal Action Card -->
+<button class="mt-space-xs w-full py-space-md px-space-md bg-surface-container-low rounded-DEFAULT flex items-center justify-center gap-space-xs text-primary font-label-lg text-label-lg hover:bg-surface-container transition-colors shadow-sm" onclick="openPlanModal()">
+<span class="material-symbols-outlined text-secondary text-[20px]">add_circle</span>
+<span>Schedule Additional Focus Block</span>
+</button>
+</div>
+</div>
+<!-- Subtle In-App Modal for Adding Record (Demonstrative interactive joy) -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm p-space-md flex items-end sm:items-center justify-center" id="quick-note-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-lg p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">history_edu</span>
+<span class="font-headline-sm text-headline-sm text-primary">Inscribe Reflection</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary" onclick="closeNoteModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Subject / Discipline</label>
+<input class="w-full px-space-sm py-2 bg-surface-container-low rounded-DEFAULT font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary placeholder:italic placeholder:text-outline" id="modal-subject-input" placeholder="e.g. Econometrics or Modern Epistemology" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Dialectic Commentary &amp; Breakthroughs</label>
+<textarea class="w-full px-space-sm py-2 bg-surface-container-low rounded-DEFAULT font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary placeholder:italic placeholder:text-outline resize-none" id="modal-content-input" placeholder="What insight crystallized during this session? What needs revisiting?" rows="3"></textarea>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 font-label-md text-label-md text-on-surface-variant hover:text-primary" onclick="closeNoteModal()">Cancel</button>
+<button class="px-space-lg py-2 bg-primary text-on-primary rounded-DEFAULT font-label-md text-label-md shadow-sm active:scale-95 transition-transform flex items-center gap-1" onclick="saveNote()">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+<span>Seal In Diary</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchDiaryTab(target) {
+    const todaySection = document.getElementById('section-today');
+    const tomorrowSection = document.getElementById('section-tomorrow');
+    const todayBtn = document.getElementById('tab-today-btn');
+    const tomorrowBtn = document.getElementById('tab-tomorrow-btn');
+
+    if (target === 'today') {
+      todaySection.classList.remove('hidden');
+      tomorrowSection.classList.add('hidden');
+
+      todayBtn.className = 'flex-1 py-2 px-space-sm rounded-DEFAULT text-center font-label-lg text-label-lg transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1.5';
+      tomorrowBtn.className = 'flex-1 py-2 px-space-sm rounded-DEFAULT text-center font-label-lg text-label-lg transition-all duration-200 text-on-surface-variant hover:text-primary flex items-center justify-center gap-1.5';
+    } else {
+      todaySection.classList.add('hidden');
+      tomorrowSection.classList.remove('hidden');
+
+      tomorrowBtn.className = 'flex-1 py-2 px-space-sm rounded-DEFAULT text-center font-label-lg text-label-lg transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1.5';
+      todayBtn.className = 'flex-1 py-2 px-space-sm rounded-DEFAULT text-center font-label-lg text-label-lg transition-all duration-200 text-on-surface-variant hover:text-primary flex items-center justify-center gap-1.5';
+    }
+  }
+
+  function openNoteModal() {
+    const modal = document.getElementById('quick-note-modal');
+    modal.classList.remove('hidden');
+  }
+
+  function closeNoteModal() {
+    const modal = document.getElementById('quick-note-modal');
+    modal.classList.add('hidden');
+  }
+
+  function openPlanModal() {
+    switchDiaryTab('tomorrow');
+    openNoteModal();
+  }
+
+  function saveNote() {
+    const subject = document.getElementById('modal-subject-input').value;
+    const content = document.getElementById('modal-content-input').value;
+    if (content.trim()) {
+      closeNoteModal();
+      document.getElementById('modal-subject-input').value = '';
+      document.getElementById('modal-content-input').value = '';
+    } else {
+      closeNoteModal();
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(45,42,38,0.04)]" data-active-classes="text-secondary bg-surface-container-low"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-primary transition-colors" data-path="ledger" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Ledger</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-primary transition-colors" data-path="focus" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Focus</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-lg transition-colors text-secondary bg-surface-container-low" data-path="session-diary" href="#"><span class="material-symbols-outlined text-[22px]">history_edu</span><span class="font-label-sm text-label-sm tracking-wide mt-0.5">Session Diary</span></a></div></nav></body></html>
