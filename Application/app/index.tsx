@@ -1,3 +1,219 @@
-import {useEffect,useState} from 'react';import {View,Text,Pressable,StyleSheet} from 'react-native';import {useRouter} from 'expo-router';import {MaterialIcons} from '@expo/vector-icons';import {Screen,Card,SectionTitle} from '../components/Screen';import BottomNav from '../components/BottomNav';import {colors} from '../theme';import {getSessions,Session} from '../data/store';
-export default function Ledger(){const router=useRouter();const[sessions,setSessions]=useState<Session[]>([]);useEffect(()=>{getSessions().then(setSessions)},[]);const active=sessions.filter(s=>s.status==='active'),archived=sessions.filter(s=>s.status!=='active');return <View style={{flex:1}}><Screen><View style={styles.header}><View><Text style={styles.kicker}>DAILY SEQUENCE · MICHAELMAS TERM</Text><Text style={styles.title}>Study Ledger</Text></View><View style={styles.badge}><MaterialIcons name="hourglass-top" size={16} color={colors.brass}/><Text style={styles.badgeText}>3.5 hrs logged</Text></View></View><Card><View style={styles.progress}><Text style={styles.big}>3.5 <Text style={styles.small}>/ 5.0 hrs</Text></Text><Text style={styles.muted}>70% fulfillment</Text></View><View style={styles.track}><View style={styles.fill}/></View></Card><SectionTitle title="Active Sessions" action={`View All (${active.length})`}/>{active.map(s=><Card key={s.id}><View style={styles.session}><View style={{flex:1}}><Text style={styles.tag}>{s.subject}</Text><Text style={styles.name}>{s.title}</Text><Text style={styles.meta}>{s.cycles}/4 cycles · {s.minutes}m block</Text></View><Pressable style={styles.play} onPress={()=>router.push({pathname:'/focus',params:{sessionId:s.id}})}><MaterialIcons name="play-arrow" size={24} color="#fff"/></Pressable></View></Card>)}<SectionTitle title="Archived & Dormant Sessions" action={`View All (${archived.length})`}/>{archived.slice(0,3).map(s=><Card key={s.id}><Text style={styles.tagMuted}>{s.status}</Text><Text style={[styles.name,{color:colors.muted}]}>{s.title}</Text><Text style={styles.meta}>{s.cycles}/4 cycles · {s.minutes}m block</Text></Card>)}<Pressable style={styles.newBtn} onPress={()=>router.push('/create-session')}><MaterialIcons name="add" size={20} color="#fff"/><Text style={styles.newText}>New Session</Text></Pressable></Screen><BottomNav/></View>}
-const styles=StyleSheet.create({header:{flexDirection:'row',justifyContent:'space-between',gap:12},kicker:{fontSize:11,letterSpacing:1.5,color:colors.brass,fontWeight:'700'},title:{fontSize:34,color:colors.ink,fontWeight:'500'},badge:{flexDirection:'row',gap:5,alignItems:'center',backgroundColor:colors.surfaceHigh,padding:8,borderRadius:999},badgeText:{fontSize:12,fontWeight:'600'},progress:{flexDirection:'row',justifyContent:'space-between',alignItems:'baseline'},big:{fontSize:30,fontWeight:'700'},small:{fontSize:14,fontWeight:'400',color:colors.muted},muted:{fontSize:12,color:colors.muted},track:{height:10,borderRadius:6,overflow:'hidden',backgroundColor:colors.surfaceHigh,marginTop:12},fill:{width:'70%',height:'100%',backgroundColor:colors.brass},session:{flexDirection:'row',alignItems:'center',gap:12},tag:{alignSelf:'flex-start',padding:6,backgroundColor:colors.brassSoft,borderRadius:6,fontSize:11,fontWeight:'700'},tagMuted:{alignSelf:'flex-start',padding:6,backgroundColor:colors.surfaceHigh,borderRadius:6,fontSize:11,color:colors.muted,fontWeight:'700'},name:{fontSize:18,fontWeight:'700',marginTop:7},meta:{fontSize:12,color:colors.muted,marginTop:6},play:{width:46,height:46,borderRadius:23,backgroundColor:colors.brass,alignItems:'center',justifyContent:'center'},newBtn:{alignSelf:'center',flexDirection:'row',gap:8,alignItems:'center',backgroundColor:colors.ink,paddingHorizontal:24,paddingVertical:14,borderRadius:999},newText:{color:'#fff',fontWeight:'700'}});
+import { useEffect, useState } from 'react';
+import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { useRouter } from 'expo-router';
+import { MaterialIcons } from '@expo/vector-icons';
+import { Screen, Card, SectionTitle } from '../components/Screen';
+import BottomNav from '../components/BottomNav';
+import { colors } from '../theme';
+import { getSessions, Session } from '../data/store';
+
+export default function Ledger() {
+  const router = useRouter();
+  const [sessions, setSessions] = useState<Session[]>([]);
+
+  useEffect(() => {
+    getSessions().then(setSessions);
+  }, []);
+
+  const active = sessions.filter((s) => s.status === 'active');
+  const archived = sessions.filter((s) => s.status !== 'active');
+
+  return (
+    <View style={{ flex: 1 }}>
+      <Screen>
+        <View style={styles.header}>
+          <View>
+            <Text style={styles.kicker}>DAILY SEQUENCE · MICHAELMAS TERM</Text>
+            <Text style={styles.title}>Study Ledger</Text>
+          </View>
+
+          <View style={styles.badge}>
+            <MaterialIcons name="hourglass-top" size={16} color={colors.brass} />
+            <Text style={styles.badgeText}>3.5 hrs logged</Text>
+          </View>
+        </View>
+
+        <Card>
+          <View style={styles.progress}>
+            <Text style={styles.big}>
+              3.5 <Text style={styles.small}>/ 5.0 hrs</Text>
+            </Text>
+            <Text style={styles.muted}>70% fulfillment</Text>
+          </View>
+
+          <View style={styles.track}>
+            <View style={styles.fill} />
+          </View>
+        </Card>
+
+        <SectionTitle title="Active Sessions" action={`View All (${active.length})`} />
+
+        {active.map((s) => (
+          <Card key={s.id}>
+            <View style={styles.session}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.tag}>{s.subject}</Text>
+                <Text style={styles.name}>{s.title}</Text>
+                <Text style={styles.meta}>
+                  {s.cycles}/4 cycles · {s.minutes}m block
+                </Text>
+              </View>
+
+              <Pressable
+                style={styles.play}
+                onPress={() =>
+                  router.push({
+                    pathname: '/focus',
+                    params: { sessionId: s.id },
+                  })
+                }
+              >
+                <MaterialIcons name="play-arrow" size={24} color="#fff" />
+              </Pressable>
+            </View>
+          </Card>
+        ))}
+
+        <SectionTitle
+          title="Archived & Dormant Sessions"
+          action={`View All (${archived.length})`}
+        />
+
+        {archived.slice(0, 3).map((s) => (
+          <Card key={s.id}>
+            <Text style={styles.tagMuted}>{s.status}</Text>
+            <Text style={[styles.name, { color: colors.muted }]}>{s.title}</Text>
+            <Text style={styles.meta}>
+              {s.cycles}/4 cycles · {s.minutes}m block
+            </Text>
+          </Card>
+        ))}
+
+        <Pressable
+          style={styles.newBtn}
+          onPress={() => router.push('/create-session')}
+        >
+          <MaterialIcons name="add" size={20} color="#fff" />
+          <Text style={styles.newText}>New Session</Text>
+        </Pressable>
+      </Screen>
+
+      <BottomNav />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
+  kicker: {
+    fontSize: 11,
+    letterSpacing: 1.5,
+    color: colors.brass,
+    fontWeight: '700',
+  },
+  title: {
+    fontSize: 34,
+    color: colors.ink,
+    fontWeight: '500',
+  },
+  badge: {
+    flexDirection: 'row',
+    gap: 5,
+    alignItems: 'center',
+    backgroundColor: colors.surfaceHigh,
+    padding: 8,
+    borderRadius: 999,
+  },
+  badgeText: {
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  progress: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+  },
+  big: {
+    fontSize: 30,
+    fontWeight: '700',
+  },
+  small: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: colors.muted,
+  },
+  muted: {
+    fontSize: 12,
+    color: colors.muted,
+  },
+  track: {
+    height: 10,
+    borderRadius: 6,
+    overflow: 'hidden',
+    backgroundColor: colors.surfaceHigh,
+    marginTop: 12,
+  },
+  fill: {
+    width: '70%',
+    height: '100%',
+    backgroundColor: colors.brass,
+  },
+  session: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  tag: {
+    alignSelf: 'flex-start',
+    padding: 6,
+    backgroundColor: colors.brassSoft,
+    borderRadius: 6,
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  tagMuted: {
+    alignSelf: 'flex-start',
+    padding: 6,
+    backgroundColor: colors.surfaceHigh,
+    borderRadius: 6,
+    fontSize: 11,
+    color: colors.muted,
+    fontWeight: '700',
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: '700',
+    marginTop: 7,
+  },
+  meta: {
+    fontSize: 12,
+    color: colors.muted,
+    marginTop: 6,
+  },
+  play: {
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    backgroundColor: colors.brass,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  newBtn: {
+    alignSelf: 'center',
+    flexDirection: 'row',
+    gap: 8,
+    alignItems: 'center',
+    backgroundColor: colors.ink,
+    paddingHorizontal: 24,
+    paddingVertical: 14,
+    borderRadius: 999,
+  },
+  newText: {
+    color: '#fff',
+    fontWeight: '700',
+  },
+});
