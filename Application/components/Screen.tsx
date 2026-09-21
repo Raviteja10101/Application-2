@@ -1,0 +1,5 @@
+import {ReactNode} from 'react'; import {SafeAreaView,ScrollView,StyleSheet,View,Text} from 'react-native'; import {colors} from '../theme';
+export function Screen({children}:{children:ReactNode}){return <SafeAreaView style={styles.safe}><ScrollView contentContainerStyle={styles.content}>{children}</ScrollView></SafeAreaView>}
+export function Card({children}:{children:ReactNode}){return <View style={styles.card}>{children}</View>}
+export function SectionTitle({title,action}:{title:string;action?:string}){return <View style={styles.row}><Text style={styles.section}>{title}</Text>{action?<Text style={styles.action}>{action}</Text>:null}</View>}
+const styles=StyleSheet.create({safe:{flex:1,backgroundColor:colors.surface},content:{padding:20,paddingBottom:110,gap:16},card:{backgroundColor:colors.card,borderRadius:12,padding:16,borderWidth:1,borderColor:colors.border},row:{flexDirection:'row',justifyContent:'space-between',alignItems:'center'},section:{fontSize:21,fontWeight:'600',color:colors.ink},action:{fontSize:12,color:colors.brass,fontWeight:'700'}});
